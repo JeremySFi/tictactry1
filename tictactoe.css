@@ -1,0 +1,59 @@
+.body   {
+    font-family: 'Times New Roman', Times, serif;
+
+
+}
+
+.tic {
+    font-size: 62px;
+    position: absolute;
+    top: 15%;
+    left: 42%;
+
+}
+.turno {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    position: absolute;
+    top: 25%;
+    left: 42%;
+
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 10px;
+
+}
+
+.container > div {
+    background-color: cornsilk;
+    display: grid;
+    place-items: center;
+    padding: 10;
+    border-radius: 10px;
+    border: 10px;
+    box-shadow: slategray;
+    cursor: pointer;
+}
+
+.restart{
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    width: auto;
+    background-color: white;
+    cursor: pointer;
+}
+
+.re{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+}
