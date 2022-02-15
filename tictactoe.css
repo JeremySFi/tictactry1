@@ -1,30 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+ }
+
 .body   {
     font-family: 'Times New Roman', Times, serif;
-
-
 }
 
 .tic {
-    font-size: 62px;
+    font-size: 53px;
     position: absolute;
-    top: 15%;
-    left: 42%;
+    top: 7%;
+    left: 40%;
+    color: black;
 
 }
 .turno {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 25px;
+    font-size: 22px;
     position: absolute;
-    top: 25%;
-    left: 42%;
+    top: 17%;
+    left: 41%;
+    color: black;
 
 }
 
 .container{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    top: 23%;
+    left: 38%;
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
@@ -33,7 +37,7 @@
 }
 
 .container > div {
-    background-color: cornsilk;
+    background-color: wheat;
     display: grid;
     place-items: center;
     padding: 10;
@@ -45,17 +49,18 @@
 
 .restart{
     position: absolute;
-    left: 50%;
-    top: 70%;
+    left: 49%;
+    top: 80%;
     width: auto;
     background-color: white;
     cursor: pointer;
 }
 
 .re{
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     background-color: white;
+    box-shadow: wheat;
 }
 
 .playerX{
