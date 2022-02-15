@@ -12,7 +12,7 @@ export default class Game {
     }
 
     makeMove(i) {
-        if (!this.gamelocked()) {
+        if (!this.gameon()) {
             return;
         }
         if (this.board[i]) {
@@ -50,7 +50,7 @@ export default class Game {
             return null;
     }
 
-    gamelocked(){
+    gameon(){
         return !this.findwinningcombination() && this.board.includes(null);
     }
 }
