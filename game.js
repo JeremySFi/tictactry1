@@ -2,7 +2,7 @@ export default class Game {
 
     constructor(){
     this.turn = "X";
-    this.board = new Array(9).fill(null);
+    this.container = new Array(9).fill(null);
     }
 
      
@@ -15,10 +15,12 @@ export default class Game {
         if (!this.gameon()) {
             return;
         }
-        if (this.board[i]) {
+
+        if (this.container[i]) {
             return;
         }
-        this.board[i] = this.turn;
+
+        this.container[i] = this.turn;
 
         if (!this.findwinningcombination()){
             this.nextTurn();
@@ -39,11 +41,11 @@ export default class Game {
         [2, 4, 6]
         ];
 
-        for (const comb of winningcondition) {
-                const [a, b, c] = comb;
+        for (const combination of winningcondition) {
+                const [a, b, c] = combination;
                 
-                if (this.board[a] && (this.board[a] === this.board[b] && this.board[a] === this.board[c])) {
-                    return comb;
+                if (this.container[a] && (this.container[a] === this.container[b] && this.container[a] === this.container[c])) {
+                    return combination;
                 }
         
             }
@@ -51,6 +53,6 @@ export default class Game {
     }
 
     gameon(){
-        return !this.findwinningcombination() && this.board.includes(null);
+        return !this.findwinningcombination() && this.container.includes(null);
     }
 }

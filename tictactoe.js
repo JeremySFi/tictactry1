@@ -1,16 +1,21 @@
 import Game from "./game.js";
+import GameView from "./gameView.js";
 
 let game = new Game();
+let gameView = new GameView(document.getElementById("container"));
 
-console.log(game.turn);
-game.nextTurn();
-console.log(game.turn);
-console.log(game.board);
 
+
+gameView.onTileClick = function (i) {
+    game.makeMove(i);
+    gameView.update(game);
+};
+
+gameView.onRestartClick = function (){
+    game = new Game();
+    gameView.update(game);
+};
  
+gameView.update(Game);
 
-
-
-let playerX = "X";
-let playerO = "O";
 
